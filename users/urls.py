@@ -1,17 +1,11 @@
-"""Defines URL patterns for users"""
+from django.urls import path, include
+from .views import UserDetail, ObtainAuthTokenView,registration_view
+from rest_framework.routers import DefaultRouter
 
-from django.urls import path
-from django.contrib.auth.views import LoginView
-
-from . import views
 
 urlpatterns = [
-    # Login page
-    path('login/', LoginView.as_view(template_name='users/login.html'), name='login'),
-
-    # Logout page
-    path('logout/', views.logout_view, name='logout'),
-
-    # Registration page
-    path('register/', views.register, name='register'),
+    path('info/<str:pk>/', UserDetail.as_view(), name='user-info'),
+    # path('register', RegistrationView.as_view(), name="register"),
+    path('login', ObtainAuthTokenView.as_view(), name="login"),
+    path('register', registration_view, name="register"),
 ]

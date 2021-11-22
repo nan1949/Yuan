@@ -1,6 +1,9 @@
-Django==2.2.4
-django-bootstrap3==11.1.0
-pytz==2019.2
-selenium==3.141.0
-sqlparse==0.3.0
-urllib3==1.25.3
+asgiref==3.4.1
+Django==3.2.9
+django-cors-headers==3.10.0
+djangorestframework==3.12.4
+mysqlclient==2.1.0rc1
+Pillow==8.4.0
+PyMySQL==1.0.2
+pytz==2021.3
+sqlparse==0.4.2
